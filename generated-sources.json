@@ -4,9 +4,9 @@
     "only-arches": [
       "x86_64"
     ],
-    "url": "https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-amd64-0.72.0.AppImage",
-    "sha512": "e1140d84fc78f2fff43edac0973b41c21b836851dc1d5663bf51e4452aecf4416b589223aaaaa7a6410ebfcc0344899cb0cc74034b55135ed5744f006ebcf9b4",
-    "size": 116246960,
+    "url": "https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-amd64-0.72.0.tar.gz",
+    "sha512": "68c4bfc28ec1f8f0d16ae37b925b34b845e8e319c035174816125c2c041ab1afcfcc18a86d9afe4cc4c35939bc6d1ba38c178e30bc94cb5593bf59fd451f43ed",
+    "size": 109839683,
     "dest": "buckets"
   },
   {
@@ -14,9 +14,9 @@
     "only-arches": [
       "aarch64"
     ],
-    "url": "https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-arm64-0.72.0.AppImage",
-    "sha512": "8298f7d1e88c52a556f6613711c8b78ab6e1c904606e355415f254e6d317d6dea17f151931b2a458359f4c4aed7ffc939671f752d6c2603a1dfd0b1470c7832b",
-    "size": 117092900,
+    "url": "https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-arm64-0.72.0.tar.gz",
+    "sha512": "b6fef026e9a0f9310c7b8c7e0e3de7f4e6d1d5a0a8f6c20c92c89258badcb9db5a4cbb850dc24ab012d945df0ac7029474884caad1f31304b4be8ae422948dfe",
+    "size": 110408440,
     "dest": "buckets"
   }
 ]

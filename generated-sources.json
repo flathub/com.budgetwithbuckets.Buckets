@@ -1,0 +1,22 @@
+[
+  {
+    "type": "archive",
+    "only-arches": [
+      "x86_64"
+    ],
+    "url": "https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-amd64-0.72.0.AppImage",
+    "sha512": "e1140d84fc78f2fff43edac0973b41c21b836851dc1d5663bf51e4452aecf4416b589223aaaaa7a6410ebfcc0344899cb0cc74034b55135ed5744f006ebcf9b4",
+    "size": 116246960,
+    "dest": "buckets"
+  },
+  {
+    "type": "archive",
+    "only-arches": [
+      "aarch64"
+    ],
+    "url": "https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-arm64-0.72.0.AppImage",
+    "sha512": "8298f7d1e88c52a556f6613711c8b78ab6e1c904606e355415f254e6d317d6dea17f151931b2a458359f4c4aed7ffc939671f752d6c2603a1dfd0b1470c7832b",
+    "size": 117092900,
+    "dest": "buckets"
+  }
+]

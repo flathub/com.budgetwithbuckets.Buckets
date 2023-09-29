@@ -34,4 +34,4 @@ modules:
       - type: script
         dest-filename: buckets.sh
         commands:
-          - TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" zypak-wrapper /app/buckets/buckets
+          - TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" zypak-wrapper /app/buckets/bucketsbeta

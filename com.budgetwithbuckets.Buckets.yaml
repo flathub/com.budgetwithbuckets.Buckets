@@ -18,19 +18,44 @@ modules:
   - name: buckets
     buildsystem: simple
     build-commands:
-      - install -Dm 644 com.budgetwithbuckets.Buckets.desktop -t /app/share/applications
-      - install -Dm 644 com.budgetwithbuckets.Buckets.png -t /app/share/icons/hicolor/512x512/apps
-      - install -Dm 644 com.budgetwithbuckets.Buckets.appdata.xml /app/share/metainfo/com.budgetwithbuckets.Buckets.metainfo.xml
+      - install -Dm 644 meta/com.budgetwithbuckets.Buckets.desktop -t /app/share/applications
+      - install -Dm 644 meta/com.budgetwithbuckets.Buckets.png -t /app/share/icons/hicolor/512x512/apps
+      - install -Dm 644 meta/com.budgetwithbuckets.Buckets.appdata.xml /app/share/metainfo/com.budgetwithbuckets.Buckets.metainfo.xml
       - install -Dm 755 buckets.sh /app/bin/buckets.sh
       - cp -r buckets /app/buckets
     sources:
-      - generated-sources.json
-      - type: file
-        path: com.budgetwithbuckets.Buckets.desktop
-      - type: file
-        path: com.budgetwithbuckets.Buckets.appdata.xml
-      - type: file
-        path: com.budgetwithbuckets.Buckets.png
+      - type: archive
+        only-arches:
+          - x86_64
+        url: https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-amd64-0.72.0.tar.gz
+        sha512: 68c4bfc28ec1f8f0d16ae37b925b34b845e8e319c035174816125c2c041ab1afcfcc18a86d9afe4cc4c35939bc6d1ba38c178e30bc94cb5593bf59fd451f43ed
+        dest: buckets
+        x-checker-data:
+          type: html
+          url: https://www.budgetwithbuckets.com/flatpak/
+          version-pattern: 'Latest beta desktop version is (.*?);'
+          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets.Beta-ubuntu-22.04-amd64-$version.tar.gz"
+      - type: archive
+        only-arches:
+          - aarch64
+        url: https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-arm64-0.72.0.tar.gz
+        sha512: b6fef026e9a0f9310c7b8c7e0e3de7f4e6d1d5a0a8f6c20c92c89258badcb9db5a4cbb850dc24ab012d945df0ac7029474884caad1f31304b4be8ae422948dfe
+        dest: buckets
+        x-checker-data:
+          type: html
+          url: https://www.budgetwithbuckets.com/flatpak/
+          version-pattern: 'Latest beta desktop version is (.*?);'
+          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets.Beta-ubuntu-22.04-arm64-$version.tar.gz"
+      - type: archive
+        url: https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets-Beta-flatpakdata-v0.72.0.tgz
+        sha512: fa7163d117b0f08a5d3d4da7878c69cc65633519545af47a5aeecd0f46a0ae9629c410c5bce9baef0002fad7b4b48518c281b0883215ef7e6965687ae79a3706
+        dest: meta
+        strip-components: 0
+        x-checker-data:
+          type: html
+          url: https://www.budgetwithbuckets.com/flatpak/
+          version-pattern: 'Latest beta desktop version is (.*?);'
+          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets-Beta-flatpakdata-v$version.tgz"
       - type: script
         dest-filename: buckets.sh
         commands:

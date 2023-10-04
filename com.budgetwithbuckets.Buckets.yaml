@@ -50,6 +50,7 @@ modules:
         url: https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets-Beta-flatpakdata-v0.72.0.tgz
         sha512: b14a5884c3d93491c4a353fb1de1e9eb912b7b30d69315b32a4924f3a1c17c2812688e3a7a07f03f75284564b281813ec870659a0be89140219dd6a218db1519
         dest: meta
+        strip-components: 0
         x-checker-data:
           type: html
           url: https://www.budgetwithbuckets.com/flatpak/

@@ -48,7 +48,7 @@ modules:
           url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets.Beta-ubuntu-22.04-arm64-$version.tar.gz"
       - type: archive
         url: https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets-Beta-flatpakdata-v0.72.0.tgz
-        sha512: b14a5884c3d93491c4a353fb1de1e9eb912b7b30d69315b32a4924f3a1c17c2812688e3a7a07f03f75284564b281813ec870659a0be89140219dd6a218db1519
+        sha512: fa7163d117b0f08a5d3d4da7878c69cc65633519545af47a5aeecd0f46a0ae9629c410c5bce9baef0002fad7b4b48518c281b0883215ef7e6965687ae79a3706
         dest: meta
         strip-components: 0
         x-checker-data:

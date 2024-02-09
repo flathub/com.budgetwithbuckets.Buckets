@@ -27,35 +27,35 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://github.com/buckets/application/releases/download/v0.72.1/Buckets-ubuntu-22.04-amd64-0.72.1.tar.gz
-        sha512: d84bcff6c0cb7b017c279ad86e98942e8c4cc3d86d1f8d838ea9ecedf599fba4e1848b6d83f13eabdc271b35e444965dc0da49d6744f2b1dd1489bd6646e4c5e
+        url: https://github.com/buckets/application/releases/download/v0.72.2/Buckets-ubuntu-22.04-amd64-0.72.2.tar.gz
+        sha512: 2af784a2f1b274bfbebb6f7a1e100b8ac29c46326c03f5dc75d2376fb678f8400170c5d2d673c5ef7e02b7d3d709cf71a9d78d001ad7e3f3ef08eb194f7ada47
         dest: buckets
         x-checker-data:
           type: html
           url: https://www.budgetwithbuckets.com/flatpak/
-          version-pattern: 'Latest stable desktop version is (.*?);'
-          url-template: "https://github.com/buckets/application/releases/download/v$version/Buckets-ubuntu-22.04-amd64-$version.tar.gz"
+          version-pattern: Latest stable desktop version is (.*?);
+          url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-ubuntu-22.04-amd64-$version.tar.gz
       - type: archive
         only-arches:
           - aarch64
-        url: https://github.com/buckets/application/releases/download/v0.72.1/Buckets-ubuntu-22.04-arm64-0.72.1.tar.gz
-        sha512: 5a6f58525abb1db0f851e0a44331acf608508850f7976f9fbce3cb8fb1f2b61220cc148f1821e446582557ab89ad4de02f089e968ea603fe64afe5b74dd373c0
+        url: https://github.com/buckets/application/releases/download/v0.72.2/Buckets-ubuntu-22.04-arm64-0.72.2.tar.gz
+        sha512: f2704fc997e5a242e9dfb7a7d05a1192d7015fe43af5d141549a03f9aaf583ce20f166e42b52a0714fc82d6a3de93ca09f5fc5b1654e119f2f7e9673e3fca9f9
         dest: buckets
         x-checker-data:
           type: html
           url: https://www.budgetwithbuckets.com/flatpak/
-          version-pattern: 'Latest stable desktop version is (.*?);'
-          url-template: "https://github.com/buckets/application/releases/download/v$version/Buckets-ubuntu-22.04-arm64-$version.tar.gz"
+          version-pattern: Latest stable desktop version is (.*?);
+          url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-ubuntu-22.04-arm64-$version.tar.gz
       - type: archive
-        url: https://github.com/buckets/application/releases/download/v0.72.1/Buckets-flatpakdata-v0.72.1.tgz
-        sha512: ea488112f2780cef56e99679bfdd45620fe95546d1c039a8b646ea42a773c4d9f31715b14354227c9e2a5cd5b12abd1bb27814fe15ab3aeaacf26135cb3f6753
+        url: https://github.com/buckets/application/releases/download/v0.72.2/Buckets-flatpakdata-v0.72.2.tgz
+        sha512: 58cb7d4e371c8834667009fc42cae72ea6c2b7cda6c57b63368c7d8f96f77fee040a6048a49b1e7edd6f54c3364f79884b50bc74f6313d81421c2b5c092dc9da
         dest: meta
         strip-components: 0
         x-checker-data:
           type: html
           url: https://www.budgetwithbuckets.com/flatpak/
-          version-pattern: 'Latest stable desktop version is (.*?);'
-          url-template: "https://github.com/buckets/application/releases/download/v$version/Buckets-flatpakdata-v$version.tgz"
+          version-pattern: Latest stable desktop version is (.*?);
+          url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-flatpakdata-v$version.tgz
       - type: script
         dest-filename: buckets.sh
         commands:

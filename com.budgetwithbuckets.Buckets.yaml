@@ -47,8 +47,8 @@ modules:
           version-pattern: Latest stable desktop version is (.*?);
           url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-ubuntu-22.04-arm64-$version.tar.gz
       - type: archive
-        url: https://github.com/buckets/application/releases/download/v0.72.2/Buckets-flatpakdata-v0.72.2.tgz
-        sha512: 58cb7d4e371c8834667009fc42cae72ea6c2b7cda6c57b63368c7d8f96f77fee040a6048a49b1e7edd6f54c3364f79884b50bc74f6313d81421c2b5c092dc9da
+        url: https://github.com/buckets/application/releases/download/v0.75.0/Buckets-flatpakdata-v0.75.0.tgz
+        sha512: 6eac202ff1c97c96d7731a554589ca32a4a30cf2cd3f2d153cff658382a60e5e4dd3fdc143397ec805b2bbb39ee811a600061e729dcf276e10e39034cc1981b9
         dest: meta
         strip-components: 0
         x-checker-data:

@@ -27,25 +27,25 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://github.com/buckets/application/releases/download/v0.72.2/Buckets-ubuntu-22.04-amd64-0.72.2.tar.gz
-        sha512: 2af784a2f1b274bfbebb6f7a1e100b8ac29c46326c03f5dc75d2376fb678f8400170c5d2d673c5ef7e02b7d3d709cf71a9d78d001ad7e3f3ef08eb194f7ada47
+        url: https://github.com/buckets/application/releases/download/v0.75.0/Buckets-linux-latest-amd64-0.75.0.tar.gz
+        sha512: d712d0e3be431d78124db31f92a60b453aed858336302c7757d355ed852561bb866e7ce81c1a6617811124bbe5fefab915781fa5ee1151f09c914baa43c38c7a
         dest: buckets
         x-checker-data:
           type: html
           url: https://www.budgetwithbuckets.com/flatpak/
           version-pattern: Latest stable desktop version is (.*?);
-          url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-ubuntu-22.04-amd64-$version.tar.gz
+          url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-linux-latest-amd64-$version.tar.gz
       - type: archive
         only-arches:
           - aarch64
-        url: https://github.com/buckets/application/releases/download/v0.72.2/Buckets-ubuntu-22.04-arm64-0.72.2.tar.gz
-        sha512: f2704fc997e5a242e9dfb7a7d05a1192d7015fe43af5d141549a03f9aaf583ce20f166e42b52a0714fc82d6a3de93ca09f5fc5b1654e119f2f7e9673e3fca9f9
+        url: https://github.com/buckets/application/releases/download/v0.75.0/Buckets-linux-latest-arm64-0.75.0.tar.gz
+        sha512: 0d6e22d0e3695ffae4d1f0d17af6bf33b2a4fabf68e347014a7a6a29befa08a4dd162974338b94356307abb3d608d45751f7410a072b0c0ef89cb3ae684d85e2
         dest: buckets
         x-checker-data:
           type: html
           url: https://www.budgetwithbuckets.com/flatpak/
           version-pattern: Latest stable desktop version is (.*?);
-          url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-ubuntu-22.04-arm64-$version.tar.gz
+          url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-linux-latest-arm64-$version.tar.gz
       - type: archive
         url: https://github.com/buckets/application/releases/download/v0.75.0/Buckets-flatpakdata-v0.75.0.tgz
         sha512: 6eac202ff1c97c96d7731a554589ca32a4a30cf2cd3f2d153cff658382a60e5e4dd3fdc143397ec805b2bbb39ee811a600061e729dcf276e10e39034cc1981b9

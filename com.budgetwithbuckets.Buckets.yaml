@@ -1,62 +1,48 @@
 app-id: com.budgetwithbuckets.Buckets
-runtime: org.freedesktop.Platform
-runtime-version: '23.08'
-sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '23.08'
 command: buckets.sh
+finish-args:
+- --device=dri
+- --filesystem=xdg-documents
+- --share=ipc
+- --share=network
+- --socket=x11
+modules:
+- build-commands:
+  - install -Dm 644 meta/com.budgetwithbuckets.Buckets.desktop -t /app/share/applications
+  - install -Dm 644 meta/com.budgetwithbuckets.Buckets.png -t /app/share/icons/hicolor/512x512/apps
+  - install -Dm 644 meta/com.budgetwithbuckets.Buckets.appdata.xml /app/share/metainfo/com.budgetwithbuckets.Buckets.metainfo.xml
+  - install -Dm 755 buckets.sh /app/bin/buckets.sh
+  - cp -r buckets /app/buckets
+  buildsystem: simple
+  name: buckets
+  sources:
+  - dest: buckets
+    only-arches:
+    - x86_64
+    sha512: df6d2aeb479d51c563992ee9fa1f00c5eead17ea043449ceed548bb5ca790878fc6dbcd5ef180610a0073780ac8c196255d4ab0cdd29d00d210dd7ce63586b96
+    type: archive
+    url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-linux-latest-amd64-0.78.0.tar.gz
+  - dest: buckets
+    only-arches:
+    - aarch64
+    sha512: c0fd29d93d9626982e977ef865b1cdfd4bea69b621bc120edc6ef7364f03e882ccd9a3d722058c3712529255bc72d24ec11adfd06deb0343f4a4d84c5a2b9c2b
+    type: archive
+    url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-linux-latest-arm64-0.78.0.tar.gz
+  - dest: meta
+    sha512: 5c62972be109b238a9b5ef708a2ee28966761b3abea2ff652a0bcab9c6e4a2ca5b7c507e016aa60d03f7829f529fa09e593192c4aa9f251f270756b0a283c2d6
+    strip-components: 0
+    type: archive
+    url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-flatpakdata-v0.78.0.tgz
+  - commands:
+    - TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" zypak-wrapper /app/buckets/bucketsbeta
+    dest-filename: buckets.sh
+    type: script
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:
-  - proprietary
-finish-args:
-  - --device=dri
-  - --filesystem=xdg-documents
-  - --share=ipc
-  - --share=network
-  - --socket=x11
-modules:
-  - name: buckets
-    buildsystem: simple
-    build-commands:
-      - install -Dm 644 meta/com.budgetwithbuckets.Buckets.desktop -t /app/share/applications
-      - install -Dm 644 meta/com.budgetwithbuckets.Buckets.png -t /app/share/icons/hicolor/512x512/apps
-      - install -Dm 644 meta/com.budgetwithbuckets.Buckets.appdata.xml /app/share/metainfo/com.budgetwithbuckets.Buckets.metainfo.xml
-      - install -Dm 755 buckets.sh /app/bin/buckets.sh
-      - cp -r buckets /app/buckets
-    sources:
-      - type: archive
-        only-arches:
-          - x86_64
-        url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-linux-latest-amd64-0.78.0.tar.gz
-        sha512: df6d2aeb479d51c563992ee9fa1f00c5eead17ea043449ceed548bb5ca790878fc6dbcd5ef180610a0073780ac8c196255d4ab0cdd29d00d210dd7ce63586b96
-        dest: buckets
-        x-checker-data:
-          type: html
-          url: https://www.budgetwithbuckets.com/flatpak/
-          version-pattern: 'Latest beta desktop version is (.*?);'
-          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets-Beta-linux-latest-amd64-$version.tar.gz"
-      - type: archive
-        only-arches:
-          - aarch64
-        url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-linux-latest-arm64-0.78.0.tar.gz
-        sha512: c0fd29d93d9626982e977ef865b1cdfd4bea69b621bc120edc6ef7364f03e882ccd9a3d722058c3712529255bc72d24ec11adfd06deb0343f4a4d84c5a2b9c2b
-        dest: buckets
-        x-checker-data:
-          type: html
-          url: https://www.budgetwithbuckets.com/flatpak/
-          version-pattern: 'Latest beta desktop version is (.*?);'
-          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets-Beta-linux-latest-arm64-$version.tar.gz"
-      - type: archive
-        url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-flatpakdata-v0.78.0.tgz
-        sha512: 5c62972be109b238a9b5ef708a2ee28966761b3abea2ff652a0bcab9c6e4a2ca5b7c507e016aa60d03f7829f529fa09e593192c4aa9f251f270756b0a283c2d6
-        dest: meta
-        strip-components: 0
-        x-checker-data:
-          type: html
-          url: https://www.budgetwithbuckets.com/flatpak/
-          version-pattern: 'Latest beta desktop version is (.*?);'
-          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets-Beta-flatpakdata-v$version.tgz"
-      - type: script
-        dest-filename: buckets.sh
-        commands:
-          - TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" zypak-wrapper /app/buckets/bucketsbeta
+- proprietary
+

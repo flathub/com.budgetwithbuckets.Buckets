@@ -27,28 +27,28 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-amd64-0.72.0.tar.gz
-        sha512: 68c4bfc28ec1f8f0d16ae37b925b34b845e8e319c035174816125c2c041ab1afcfcc18a86d9afe4cc4c35939bc6d1ba38c178e30bc94cb5593bf59fd451f43ed
+        url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-linux-latest-amd64-0.78.0.tar.gz
+        sha512: df6d2aeb479d51c563992ee9fa1f00c5eead17ea043449ceed548bb5ca790878fc6dbcd5ef180610a0073780ac8c196255d4ab0cdd29d00d210dd7ce63586b96
         dest: buckets
         x-checker-data:
           type: html
           url: https://www.budgetwithbuckets.com/flatpak/
           version-pattern: 'Latest beta desktop version is (.*?);'
-          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets-Beta-ubuntu-22.04-amd64-$version.tar.gz"
+          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets-Beta-linux-latest-amd64-$version.tar.gz"
       - type: archive
         only-arches:
           - aarch64
-        url: https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets.Beta-ubuntu-22.04-arm64-0.72.0.tar.gz
-        sha512: b6fef026e9a0f9310c7b8c7e0e3de7f4e6d1d5a0a8f6c20c92c89258badcb9db5a4cbb850dc24ab012d945df0ac7029474884caad1f31304b4be8ae422948dfe
+        url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-linux-latest-arm64-0.78.0.tar.gz
+        sha512: c0fd29d93d9626982e977ef865b1cdfd4bea69b621bc120edc6ef7364f03e882ccd9a3d722058c3712529255bc72d24ec11adfd06deb0343f4a4d84c5a2b9c2b
         dest: buckets
         x-checker-data:
           type: html
           url: https://www.budgetwithbuckets.com/flatpak/
           version-pattern: 'Latest beta desktop version is (.*?);'
-          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets-Beta-ubuntu-22.04-arm64-$version.tar.gz"
+          url-template: "https://github.com/buckets/desktop-beta/releases/download/v$version/Buckets-Beta-linux-latest-arm64-$version.tar.gz"
       - type: archive
-        url: https://github.com/buckets/desktop-beta/releases/download/v0.72.0/Buckets-Beta-flatpakdata-v0.72.0.tgz
-        sha512: fa7163d117b0f08a5d3d4da7878c69cc65633519545af47a5aeecd0f46a0ae9629c410c5bce9baef0002fad7b4b48518c281b0883215ef7e6965687ae79a3706
+        url: https://github.com/buckets/desktop-beta/releases/download/v0.78.0/Buckets-Beta-flatpakdata-v0.78.0.tgz
+        sha512: 5c62972be109b238a9b5ef708a2ee28966761b3abea2ff652a0bcab9c6e4a2ca5b7c507e016aa60d03f7829f529fa09e593192c4aa9f251f270756b0a283c2d6
         dest: meta
         strip-components: 0
         x-checker-data:

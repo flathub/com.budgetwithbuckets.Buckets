@@ -27,8 +27,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://github.com/buckets/application/releases/download/v0.75.0/Buckets-linux-latest-amd64-0.75.0.tar.gz
-        sha512: d712d0e3be431d78124db31f92a60b453aed858336302c7757d355ed852561bb866e7ce81c1a6617811124bbe5fefab915781fa5ee1151f09c914baa43c38c7a
+        url: https://github.com/buckets/application/releases/download/v0.80.0/Buckets-linux-latest-amd64-0.80.0.tar.gz
+        sha512: c234c062dc0687f73176dda159c351ab6b06e0c8819bd2b44a2a425b648bcfe76107c384cc1525640caf78c2c38248ed8e507ca9a94c555aadc588a5ebea851c
         dest: buckets
         x-checker-data:
           type: html
@@ -38,8 +38,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        url: https://github.com/buckets/application/releases/download/v0.75.0/Buckets-linux-latest-arm64-0.75.0.tar.gz
-        sha512: 0d6e22d0e3695ffae4d1f0d17af6bf33b2a4fabf68e347014a7a6a29befa08a4dd162974338b94356307abb3d608d45751f7410a072b0c0ef89cb3ae684d85e2
+        url: https://github.com/buckets/application/releases/download/v0.80.0/Buckets-linux-latest-arm64-0.80.0.tar.gz
+        sha512: 7e42b845764feb25fbd0028d860a30e960a52a7ebf4acd1abb742f449fe6a18a5d0e98a82854960104b1819cbf78d826058af9b83677083d86090c9e31d92820
         dest: buckets
         x-checker-data:
           type: html
@@ -47,8 +47,8 @@ modules:
           version-pattern: Latest stable desktop version is (.*?);
           url-template: https://github.com/buckets/application/releases/download/v$version/Buckets-linux-latest-arm64-$version.tar.gz
       - type: archive
-        url: https://github.com/buckets/application/releases/download/v0.75.0/Buckets-flatpakdata-v0.75.0.tgz
-        sha512: 6eac202ff1c97c96d7731a554589ca32a4a30cf2cd3f2d153cff658382a60e5e4dd3fdc143397ec805b2bbb39ee811a600061e729dcf276e10e39034cc1981b9
+        url: https://github.com/buckets/application/releases/download/v0.80.0/Buckets-flatpakdata-v0.80.0.tgz
+        sha512: 179f9ba6b83111ff1662cf8e005d7eaa01e8b09cdeeecb1a71fb40c55ddb083e3f00781a2aa1eab861eff3fb7cd7b253066c60e9f3a2bab65bc64c51eefdf8cf
         dest: meta
         strip-components: 0
         x-checker-data:

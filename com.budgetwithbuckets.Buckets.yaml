@@ -21,20 +21,20 @@ modules:
   - dest: buckets
     only-arches:
     - x86_64
-    sha512: 0120bf072be9a3400347c7eff9dbbead363830000d261722b7afebbe86075c1a6408f28272b97a8b18952bef52fb9ee858265b6468e0c32d666d1d5017799ade
+    sha512: 300f391583e58a70ea88955b5c1242e694d99dc6080e86c9ea06c5d40a12c87f9d35fdfefcc9b18ff5950aca4bb4bc0b9b7b656143ebc56c918b9600da169610
     type: archive
-    url: https://github.com/buckets/desktop-beta/releases/download/v0.80.0/Buckets-Beta-linux-latest-amd64-0.80.0.tar.gz
+    url: https://github.com/buckets/desktop-beta/releases/download/v0.81.0/Buckets-Beta-linux-latest-amd64-0.81.0.tar.gz
   - dest: buckets
     only-arches:
     - aarch64
-    sha512: 092c023892bacf352d495797a1aacaabb0381d6e7d0321c9606b237ef7086ff8df3bcfcbad2562f9f7c684fa5ce9ee9972a33b528ca787eebf70011146a83cf2
+    sha512: 32677f48635e2d9cc41e96e574cfa9167c3ffe1f8f2d27165b1d4382ff212589fc3da723f5bdefe0c0efb08c3ec2b99cdb47b1698a1fee1d8c136b2e754850ae
     type: archive
-    url: https://github.com/buckets/desktop-beta/releases/download/v0.80.0/Buckets-Beta-linux-latest-arm64-0.80.0.tar.gz
+    url: https://github.com/buckets/desktop-beta/releases/download/v0.81.0/Buckets-Beta-linux-latest-arm64-0.81.0.tar.gz
   - dest: meta
-    sha512: e4b146d718c2e725684efe2692236eb6719146c5cf72646d859a6ee2114fc5f14342505468968efa8855650a2be4a468fdaef3fde8d4556a4f38e4944ae4c75a
+    sha512: 2546008c037bcd888f9da6e0eda3a057983196a1add244f878fad23b179f1684833b3b4717653b64ed799425fcdf11a998a43e10b3d4090880152f34078f8fb4
     strip-components: 0
     type: archive
-    url: https://github.com/buckets/desktop-beta/releases/download/v0.80.0/Buckets-Beta-flatpakdata-v0.80.0.tgz
+    url: https://github.com/buckets/desktop-beta/releases/download/v0.81.0/Buckets-Beta-flatpakdata-v0.81.0.tgz
   - commands:
     - TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" zypak-wrapper /app/buckets/bucketsbeta
     dest-filename: buckets.sh
